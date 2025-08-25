@@ -1,103 +1,110 @@
-import Image from "next/image";
+import { FaGithub, FaReact, FaDocker, FaLinkedin, FaAndroid, FaJava, FaFigma} from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import { SiSqlite, SiFlask, SiFirebase, SiTypescript}  from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import ProjectCard from './ProjectCard';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+    <div>
+      <div className="flex gap-16 ml-12 mt-12 text-2xl">
+        <a href="#about" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">About</a>
+        <a href="#projects" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">Projects</a>
+        <a href="#contact" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">Contact</a>
+      </div>
+      <section id="Name"
+      className="min-h-screen flex items-center justify-center px-8 max-w-screen-xl mx-auto">
+        <div className="flex flex-col items-start max-w-md mr-12">
+          <h1 className="text-4xl text-center font-bold mt-8">Ivan Soroka</h1>
+          <p className="text-center">Aspiring Software Developer</p>
+          <div className="flex space-x-6 text-2xl mt-4">
+          <a href="https://github.com/IvanSoroka1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub />
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="https://www.linkedin.com/in/ivan-soroka1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        </div>
+        <img
+        src="./Profile_Pic.jpg"
+        alt="Profile picture"
+        className="w-64 h-64 rounded-full mb-6 object-cover ml-12"
+        />
+        
+      </section>
+
+      <div className="bg-white text-black">
+        <div id="about"
+        className="relative min-h-screen flex flex-col justify-center px-8 max-w-screen-xl mx-auto">
+          <h2 className="absolute top-6 left-6 text-3xl font-semibold tracking-widest">ABOUT</h2>
+          <p>I am recent Bachelor of Science in computing science graduate from the University of Alberta. I have taken courses related to software development, databases, algorithms and data structures, computer architecture, machine learning and more.
+          </p>
+        </div>
+      </div>
+
+      <section id = "experience"
+      className="relative min-h-screen flex flex-col justify-center px-8 max-w-screen-lg mx-auto">
+        <h2 className = "absolute top-6 left-0 text-3xl font-semibold tracking-widest">EXPERIENCE</h2>
+        Summer Student Intern
+      </section>
+
+    
+    <div className="bg-white text-black">
+      <section id = "projects"
+        className="relative flex flex-col max-w-screen-xl mx-auto ">
+        <h2 className = "absolute top-6 left-0 text-3xl font-semibold tracking-widest">PROJECTS</h2>
+        <ul className="mt-24">
+          <ProjectCard 
+          title="Task Manager Web App"
+          description= "This is a web app that allows you organize any tasks that you are facing in work or life into lists and boards. It is inspired by the popular tool Trello. It has been deployed  "
+          imageUrl="https://picsum.photos/512"
+          githubUrl="https://github.com/IvanSoroka1/trello-clone"
+          extraLinks={[
+            { label: 'Live demo', url: 'http://18.219.52.3/' },
+          ]}
+          techIcons = {[RiTailwindCssFill, FaReact, SiSqlite, SiTypescript, FaDocker ]} /*Add C#, ASP.NET, Typescript, tailwind css, AWS EC2, AWS RDS */
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        <ProjectCard
+          title="Student Learning Companion Tool"
+          description= "I made this project for CMPUT 401 - Software Process and Product Management at the University of Alberta. This project is a chatbot web application to be used by students of the Faculty of Medicine and Dentistry at the University of Alberta. It allows..."
+          imageUrl="/screenshot.png"
+          githubUrl="https://github.com/UAlberta-CMPUT401/w24project-fomd_chat"
+          extraLinks={[
+            { label: 'More Info', url: 'https://cmput401.ca/projects/ae52f15e-adae-44ef-aca1-dccb0086d794' },
+            {label: 'Documentation', url:'https://ualberta-cmput401.github.io/w24project-fomd_chat/'}
+          ]}
+          techIcons = {[ FaReact, SiSqlite , FaDocker , SiFlask, FaFigma]}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <ProjectCard
+          title="Household Inventory Manager"
+          description= "I made this project for CMPUT 301 - Introduction to Software Engineering at the University of Alberta. This is an Android app that allows you to keep track of items and valuables that are laying around in your house or that belong to you."
+          imageUrl="https://picsum.photos/512"
+          githubUrl="https://github.com/CMPUT301F23T31/LetsGoGolfing"
+          techIcons={[FaAndroid, FaJava, SiFirebase, FaFigma]}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <ProjectCard
+          title="Artificial Intelligence Capstone Project"
+          description= "I made this project for CMPUT 469 - Artificial Intelligence Capstone at the University of Alberta."
+          imageUrl="https://picsum.photos/512"
+          githubUrl="https://github.com/UAlberta-CMPUT401/w24project-fomd_chat"
+          />
+
+          <ProjectCard
+          title="Team Fortress 2: Independent Project"
+          description= "This tool allows you to perform certain in-game movement mechanics automatically."
+          imageUrl="https://picsum.photos/512"
+          githubUrl="https://github.com/UAlberta-CMPUT401/w24project-fomd_chat"
+          />
+          
+        </ul>
+      </section>
+    </div>
+
+      <section id="contact"className="relative min-h-screen flex flex-col justify-center px-8 max-w-screen-lg mx-auto">
+        <h2 className = "absolute top-6 left-6 text-3xl font-semibold tracking-widest">CONTACT</h2>
+        <p>Email: youremail@example.com</p>
+      </section>
     </div>
   );
 }
