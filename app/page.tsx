@@ -26,7 +26,7 @@ export default function Home() {
         </div>
         </div>
         <img
-        src="./Profile_Pic.jpg"
+        src="/Profile_Pic.jpg"
         alt="Profile picture"
         className="w-64 h-64 rounded-full mb-6 object-cover ml-12"
         />
