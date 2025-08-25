@@ -1,7 +1,7 @@
 // components/ProjectCard.tsx
-import { FaGithub, FaReact, FaDocker} from 'react-icons/fa';
+import { IconType } from 'react-icons';
+import { FaGithub} from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
-import { SiSqlite, SiFlask}  from "react-icons/si";
 
 
 type ProjectCardProps = {
@@ -9,7 +9,7 @@ type ProjectCardProps = {
   description: string;
   imageUrl: string;
   githubUrl: string;
-  extraLinks: { url: string; label: string }[];
+  extraLinks?: { url: string; label: string }[];
   techIcons?: IconType[];
 };
 

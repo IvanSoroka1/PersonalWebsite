@@ -1,6 +1,5 @@
 import { FaGithub, FaReact, FaDocker, FaLinkedin, FaAndroid, FaJava, FaFigma} from 'react-icons/fa';
-import { FiExternalLink } from 'react-icons/fi';
-import { SiSqlite, SiFlask, SiFirebase, SiTypescript}  from "react-icons/si";
+import { SiSqlite, SiFlask, SiFirebase, SiTypescript, SiAmazonec2}  from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import ProjectCard from './ProjectCard';
 
@@ -63,7 +62,7 @@ export default function Home() {
           extraLinks={[
             { label: 'Live demo', url: 'http://18.219.52.3/' },
           ]}
-          techIcons = {[RiTailwindCssFill, FaReact, SiSqlite, SiTypescript, FaDocker ]} /*Add C#, ASP.NET, Typescript, tailwind css, AWS EC2, AWS RDS */
+          techIcons = {[RiTailwindCssFill, FaReact, SiSqlite, SiTypescript, FaDocker, SiAmazonec2]} /*Add C#, ASP.NET, Typescript, tailwind css, AWS EC2, AWS RDS */
           />
         <ProjectCard
           title="Student Learning Companion Tool"
