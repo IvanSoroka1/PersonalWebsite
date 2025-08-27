@@ -4,6 +4,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { DiPostgresql } from "react-icons/di";
 import ProjectCard from './ProjectCard';
 import Contact from './Contact'
+import Experience from './Experience'
+import About from './About'
 
 export default function Home() {
   return (
@@ -35,20 +37,8 @@ export default function Home() {
 
       </section>
 
-      <div className="bg-white text-black">
-        <div id="about"
-          className="relative min-h-screen flex flex-col justify-center px-8 max-w-screen-xl mx-auto">
-          <h2 className="absolute top-6 left-0 text-3xl font-semibold tracking-widest">ABOUT</h2>
-          <p>I am recent Bachelor of Science in computing science graduate from the University of Alberta. I have taken courses related to software development, databases, algorithms and data structures, computer architecture, machine learning and more.
-          </p>
-        </div>
-      </div>
-
-      <section id="experience"
-        className="relative min-h-screen flex flex-col justify-center px-8 max-w-screen-xl mx-auto">
-        <h2 className="absolute top-6 left-0 text-3xl font-semibold tracking-widest">EXPERIENCE</h2>
-        Summer Student Intern
-      </section>
+    <About/>
+    <Experience/>
 
 
       <div className="bg-white text-black">
@@ -80,31 +70,29 @@ export default function Home() {
             <ProjectCard
               title="Household Inventory Manager"
               description="I made this project for CMPUT 301 - Introduction to Software Engineering at the University of Alberta. This is an Android app that allows you to keep track of items and valuables that are laying around in your house or that belong to you."
-              imageUrl="https://picsum.photos/512"
+              imageUrl="/InventoryManagerPic.png"
               githubUrl="https://github.com/CMPUT301F23T31/LetsGoGolfing"
               techIcons={[FaAndroid, FaJava, SiFirebase, FaFigma]}
             />
             <ProjectCard
               title="Artificial Intelligence Capstone Project"
-              description="I made this project for CMPUT 469 - Artificial Intelligence Capstone at the University of Alberta."
-              imageUrl="https://picsum.photos/512"
-              githubUrl="https://github.com/UAlberta-CMPUT401/w24project-fomd_chat"
+              description="I made this project for CMPUT 469 - Artificial Intelligence Capstone at the University of Alberta. It is about an area of artificial intelligence called Reinforcement Learning. Reinforcement learning is when agents learn how to act in an environment by interacting with it. Specifically, it examines streaming-reinforcement learning, an approach to reinforcement learning for resource contrained devices, in the partially obserable context."
+              imageUrl="/RL.jpg"
+              githubUrl="https://github.com/CMPUT-469-iRL/iRL"
             />
 
             <ProjectCard
               title="Team Fortress 2: Independent Project"
               description="This tool allows you to perform certain in-game movement mechanics automatically."
               imageUrl="/rocketjump.png"
-              githubUrl="https://github.com/UAlberta-CMPUT401/w24project-fomd_chat"
+              githubUrl="https://github.com/IvanSoroka1/VideoGameAssistTool"
             />
 
           </ul>
         </section>
       </div>
 
-      {/* <section id="contact" className="relative min-h-screen flex flex-col justify-center px-8 max-w-screen-xl mx-auto"> */}
-         <Contact />
-      {/* </section> */}
+      <Contact />
     </div>
   );
 }
