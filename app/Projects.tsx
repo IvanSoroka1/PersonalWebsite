@@ -16,7 +16,7 @@ return (<div className="bg-white text-black">
             <ProjectCard
               title="Task Manager Web App"
               description="This is a web app that allows you organize any tasks that you are facing in work or life into lists and boards. It is inspired by the popular tool Trello. It has been deployed on an AWS EC2 server instance and uses a AWS RDS instance for the Postgres database. The app is fully authenticated. The frontend was programmed in Typescript and React, whereas the backend was made with C# and ASP.NET Core."
-              imageUrl="https://picsum.photos/512"
+              imageUrl="/taskmanager-demo-screen.png"
               githubUrl="https://github.com/IvanSoroka1/trello-clone"
               extraLinks={[
                 { label: 'Live demo', url: 'http://18.219.52.3/' },

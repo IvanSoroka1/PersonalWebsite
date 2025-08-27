@@ -8,13 +8,14 @@ import Projects from './Projects';
 export default function Home() {
   return (
     <div>
-      <div className="flex gap-16 ml-12 mt-12 text-2xl">
-        <a href="#about" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">About</a>
-        <a href="#projects" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">Projects</a>
-        <a href="#contact" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">Contact</a>
-      </div>
       <section id="Name"
-        className="min-h-screen flex items-center justify-center px-8 max-w-screen-xl mx-auto">
+        className="relative min-h-screen flex items-center justify-center px-8 max-w-screen-xl mx-auto">
+
+        <div className="absolute top-6 left-0 flex gap-16 text-2xl">
+          <a href="#about" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">About</a>
+          <a href="#projects" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">Projects</a>
+          <a href="#contact" className="transition-transform duration-300 hover:scale-110 hover:text-blue-600">Contact</a>
+        </div>
         <div className="flex flex-col items-start max-w-md mr-12">
           <h1 className="text-4xl text-center font-bold mt-8">Ivan Soroka</h1>
           <p className="text-center">Aspiring Software Developer</p>
@@ -35,10 +36,10 @@ export default function Home() {
 
       </section>
 
-    <About/>
-    <Experience/>
-    <Projects />
-    <Contact />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
     </div>
   );
 }
