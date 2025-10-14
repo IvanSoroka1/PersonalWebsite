@@ -1,10 +1,11 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
-import { FaReact, FaDocker, FaAndroid, FaJava, FaFigma } from 'react-icons/fa';
+import { FaReact, FaDocker, FaAndroid, FaJava, FaFigma, FaFirefoxBrowser, FaFileExcel, FaPython } from 'react-icons/fa';
 import { SiSqlite, SiFlask, SiFirebase, SiTypescript, SiAmazonec2 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiPostgresql } from "react-icons/di";
+import { IoLogoJavascript } from "react-icons/io5";
 
 export default function Projects() {
 
@@ -40,6 +41,16 @@ return (<div className="bg-white text-black">
               imageUrl="/InventoryManagerPic.png"
               githubUrl="https://github.com/CMPUT301F23T31/LetsGoGolfing"
               techIcons={[FaAndroid, FaJava, SiFirebase, FaFigma]}
+            />
+            <ProjectCard
+              title="Indeed Skill Scraper"
+              description="This tool scrapes jobs on Indeed to see the most in-demand skills that employers are looking for. It functions as a Firefox extension that communicates with a backend that is written in Python using Flask. The backend takes the data generated from the extension and stores it in an Excel file. This project contains a Python file that takes the data from the Excel spreadsheet and outputs the most in-demand skills in another worksheet within the same workbook. It also outputs the most common n-skill combinations. "
+              imageUrl="/IndeedSkillScraper.png"
+              githubUrl="https://github.com/IvanSoroka1/IndeedSkillScraper"
+              extraLinks={[
+                {label: "Example Excel File", url: "https://github.com/IvanSoroka1/IndeedSkillScraper/raw/refs/heads/main/skill_counts.xlsx"}
+              ]}
+              techIcons={[FaFirefoxBrowser, IoLogoJavascript, FaFileExcel, SiFlask, FaPython]}
             />
             <ProjectCard
               title="Artificial Intelligence Capstone Project"
